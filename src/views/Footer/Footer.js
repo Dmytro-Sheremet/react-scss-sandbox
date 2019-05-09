@@ -5,7 +5,7 @@ export default class index extends Component {
 	render() {
 		return (
 			<div className={style.container}>
-				<h2>Footer</h2>
+				<h2>D.S. 2019</h2>
 			</div>
 		);
 	}

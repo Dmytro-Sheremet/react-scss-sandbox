@@ -3,7 +3,7 @@
 .container {
 	position: fixed;
 	width: calc(#{$dim-main-width} - 3 * #{$dim-root-margins});
-	height: $dim-main-height;
+	height: calc(#{$dim-main-height} - #{$dim-root-margins});
 	left: calc(#{$dim-sidebar-width} + 2 * #{$dim-root-margins});
 	top: $dim-nav-height;
 	background-color: $color-grey-30;
@@ -22,6 +22,6 @@
 		background-color: $color-grey-20;
 	}
 	&::-webkit-scrollbar-thumb {
-		background-color: $color-grey-30;
+		background-color: $color-grey-50;
 	}
 }

@@ -14,18 +14,33 @@
 	.links {
 		background-color: $color-grey-30;
 		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			position: absolute;
-			text-align: center;
 			width: calc(#{$dim-sidebar-width} - #{$dim-root-margins});
-			background-color: green;
+			height: calc(#{$dim-nav-height} - 2 * #{$dim-root-margins});
+			background-color: $color-grey-30;
+			&:hover {
+				cursor: pointer;
+			}
 		}
 		ul {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
 			position: absolute;
 			left: calc(#{$dim-sidebar-width} + 2 * #{$dim-root-margins});
-			display: flex;
 			width: calc(#{$dim-main-width} - 4 * #{$dim-root-margins});
-			background-color: red;
+			height: calc(#{$dim-nav-height} - 2 * #{$dim-root-margins});
+			background-color: $color-grey-50;
 			li {
+				margin: 0 5px;
+				&:hover {
+					border-bottom: solid white 1px;
+					cursor: pointer;
+				}
 			}
 		}
 	}

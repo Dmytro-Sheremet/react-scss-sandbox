@@ -7,7 +7,7 @@ $dim-nav-height: 50px;
 
 //Footer Dimensions
 $dim-footer-width: 100vw;
-$dim-footer-height: 50px;
+$dim-footer-height: 10px;
 
 //SideBar dimensions
 $dim-sidebar-width: 180px;
@@ -64,6 +64,7 @@ $base-tint-4: adjust-hue($base-color, 360 * ($lamda + 2 * $wing/360));
 
 body {
 	font-family: 'Lato', sans-serif;
+	color: white;
 }
 
 .viewport {

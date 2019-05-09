@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+.container {
+	position: fixed;
+	width: $dim-footer-width;
+	height: $dim-footer-height;
+	left: 0;
+	top: calc(100vh - #{$dim-footer-height});
+	background-color: $color-grey-20;
+}

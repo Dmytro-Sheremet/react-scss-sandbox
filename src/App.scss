@@ -1,0 +1,237 @@
+//dimensions
+$dim-root-margins: 10px;
+
+//NavBar Dimensions
+$dim-nav-width: 100vw;
+$dim-nav-height: 50px;
+
+//Footer Dimensions
+$dim-footer-width: 100vw;
+$dim-footer-height: 50px;
+
+//SideBar dimensions
+$dim-sidebar-width: 180px;
+$dim-sidebar-height: calc(100vh - #{$dim-nav-height} - #{$dim-footer-height});
+
+//MainView Dimensions
+$dim-main-width: calc(100vw - #{$dim-sidebar-width});
+$dim-main-height: calc(100vh - #{$dim-nav-height} - #{$dim-footer-height});
+//---------------------------------------------------------------------
+
+//colors
+
+$color-text-light: rgb(220, 220, 220);
+$color-text-dark: rgb(50, 50, 50);
+
+$color-grey-0: hsl(0, 0, 100);
+$color-grey-5: hsl(0, 0, 95);
+$color-grey-10: hsl(0, 0, 90);
+$color-grey-20: hsl(0, 0, 80);
+$color-grey-30: hsl(0, 0, 70);
+$color-grey-40: hsl(0, 0, 60);
+$color-grey-50: hsl(0, 0, 50);
+$color-grey-60: hsl(0, 0, 40);
+$color-grey-70: hsl(0, 0, 30);
+$color-grey-80: hsl(0, 0, 20);
+$color-grey-90: hsl(0, 0, 10);
+$color-grey-100: hsl(0, 0, 0);
+
+$hue: 60; /* 0-360 */
+$satur: 100; /* 0-100 */
+$lightness: 50; /* 0-50-100 */
+
+$lamda: 0; /* 0-360 */
+$wing: 7; /* 0-360, ... */
+$grey-wing: $wing * 10; /* 0-100 */
+
+$base-color: hsl($hue, $satur, $lightness);
+
+$base-dark: lighten($base-color, 50%);
+$base-dark: darken($base-color, 50%);
+$base-satur-up: saturate($base-color, 10);
+$base-satur-down: desaturate($base-color, 20%);
+$base-light-op-50: rgba($base-color, 0.5);
+
+$base-tint: adjust-hue($base-color, 360 * $lamda/360);
+$base-grey: desaturate($base-color, 100%);
+$base-grey-light: lighten($base-grey, 50% * $grey-wing/100);
+$base-grey-dark: darken($base-grey, 50% * $grey-wing/100);
+$base-tint-1: adjust-hue($base-color, 360 * ($lamda - 2 * $wing/360));
+$base-tint-2: adjust-hue($base-color, 360 * ($lamda - $wing/360));
+$base-tint-3: adjust-hue($base-color, 360 * ($lamda + $wing/360));
+$base-tint-4: adjust-hue($base-color, 360 * ($lamda + 2 * $wing/360));
+//---------------------------------------------------------------------------
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+	box-sizing: border-box;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.viewport {
+	// position: relative;
+	.App {
+		text-align: center;
+	}
+
+	.App-header {
+		background-color: grey;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: calc(10px + 2vmin);
+		color: white;
+	}
+
+	.App-link {
+		color: darkgray;
+	}
+
+	.btn {
+		width: 200px;
+		height: 50px;
+		font-size: 20px;
+		border-radius: 5px;
+		margin-top: 20px;
+		background: yellow;
+		border: none;
+		&:hover {
+			background: rgb(236, 233, 36);
+		}
+	}
+
+	@keyframes App-logo-spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}

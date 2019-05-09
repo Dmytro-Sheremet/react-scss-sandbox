@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+.container {
+	position: fixed;
+	width: 100vw;
+	height: $dim-main-height;
+	left: 0;
+	top: $dim-nav-height;
+	background-color: $color-grey-20;
+}

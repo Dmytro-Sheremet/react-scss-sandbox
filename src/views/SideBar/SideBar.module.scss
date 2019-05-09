@@ -1,0 +1,38 @@
+@import '../../App.scss';
+
+.container {
+	// visibility: hidden;
+	position: fixed;
+	width: $dim-sidebar-width;
+	height: $dim-main-height;
+	left: $dim-root-margins;
+	top: $dim-nav-height;
+	background-color: $color-grey-30;
+	
+	box-sizing: border-box;
+	padding: 3px;
+	ul {
+		li {
+			padding: 5px 20px;
+			text-align: right;
+			background: $color-grey-10;
+			margin-bottom: 3px;
+			border: 1px solid darkgrey;
+			list-style: none;
+			&:hover {
+				background: $color-grey-5;
+				cursor: pointer;
+			}
+		}
+	}
+
+	overflow-y: scroll; // or 'auto'
+	overflow-x: hidden; // or 'auto'
+	&::-webkit-scrollbar {
+		width: $dim-root-margins;
+		background-color: $color-grey-20;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $color-grey-30;
+	}
+}

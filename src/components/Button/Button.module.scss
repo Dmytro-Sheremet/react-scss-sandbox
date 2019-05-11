@@ -1,16 +1,24 @@
 @import '../../App.scss';
 
-
 .btn {
-	width: 200px;
-	height: 50px;
-	font-size: 20px;
-	border-radius: 5px;
-	margin-top: 20px;
-	background: $button-two;
+	text-transform: uppercase;
 	color: white;
+	display: inline-block;
 	border: none;
-	&:hover {
-		background: rgb(228, 49, 49);
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+$buttonColors: 'primary' $color-primary, 'secondary' $color-secondary,
+	'success' $color-success, 'info' $color-info, 'error' $color-error;
+
+@each $color in $buttonColors {
+	.#{nth($color, 1)} {
+		background-color: desaturate(nth($color, 2), 40);
+		&:hover {
+			background-color: desaturate(nth($color, 2), 30);
+		}
 	}
 }

@@ -10,7 +10,7 @@ $dim-footer-width: 100vw;
 $dim-footer-height: 10px;
 
 //SideBar dimensions
-$dim-sidebar-width: 180px;
+$dim-sidebar-width: 120px;
 $dim-sidebar-height: calc(100vh - #{$dim-nav-height} - #{$dim-footer-height});
 
 //MainView Dimensions
@@ -35,6 +35,12 @@ $color-grey-70: hsl(0, 0, 30);
 $color-grey-80: hsl(0, 0, 20);
 $color-grey-90: hsl(0, 0, 10);
 $color-grey-100: hsl(0, 0, 0);
+
+$color-primary: hsl(240, 100, 50);
+$color-secondary: desaturate($color-primary, 100);
+$color-success: hsl(120, 100, 50);
+$color-info: hsl(60, 100, 50);
+$color-error: hsl(0, 100, 50);
 
 $hue: 60; /* 0-360 */
 $satur: 100; /* 0-100 */
@@ -86,19 +92,6 @@ body {
 
 	.App-link {
 		color: darkgray;
-	}
-
-	.btn {
-		width: 200px;
-		height: 50px;
-		font-size: 20px;
-		border-radius: 5px;
-		margin-top: 20px;
-		background: yellow;
-		border: none;
-		&:hover {
-			background: rgb(236, 233, 36);
-		}
 	}
 
 	@keyframes App-logo-spin {

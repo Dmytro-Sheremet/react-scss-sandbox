@@ -1,15 +1,22 @@
 import React from 'react';
-import styles from './Button.module.scss';
-const Button = () => {
-	return (
-		<>
-			<button
-				className={styles.btn}
-				onClick={() => alert('I am styled with CSS Modules')}
-			>
-				I am button 2 - Press Me
-			</button>
-		</>
+import CC from 'class-names';
+import style from './Button.module.scss';
+
+export default function Button({ ...props }) {
+	let styles = CC(
+		props.style.reduce((container, string) => {
+			if (string in style) {
+				container.push(style[string]);
+			}
+			return container;
+		}, []),
 	);
-};
-export default Button;
+
+	return (
+		<div>
+			<button className={styles}>
+				{props.name ? props.name : 'NO_NAME'}
+			</button>
+		</div>
+	);
+}

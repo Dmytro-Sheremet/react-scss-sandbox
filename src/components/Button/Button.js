@@ -1,17 +1,9 @@
 import React from 'react';
-import CC from 'class-names';
 import style from './Button.module.scss';
+import { tools } from '../../tools';
 
 export default function Button({ ...props }) {
-	let styles = CC(
-		props.style.reduce((container, string) => {
-			if (string in style) {
-				container.push(style[string]);
-			}
-			return container;
-		}, []),
-	);
-
+	let styles = tools.styling.takeFrom(props.styles, style);
 	return (
 		<div>
 			<button className={styles}>

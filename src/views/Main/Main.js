@@ -1,18 +1,21 @@
 import React from 'react';
-// import CC from 'class-names';
+import { Switch, Route } from 'react-router-dom';
+
 import style from './Main.module.scss';
-import Button from '../../components/Button/Button';
+import Home from '../Home/Home';
+import Info from '../Info/Info';
+import Grid from '../Grid/Grid';
 
-export default function Main() {
+const Main = () => {
 	return (
-		<div className={style.container}>
-			<h1> main </h1>
-
-			<Button styles='btn primary' name='Primary' />
-			<Button styles='btn secondary' name='SecoNdaRy' />
-			<Button styles='btn success' name='success' />
-			<Button styles='btn info' name='info' />
-			<Button styles='btn error' name='error' />
-		</div>
+		<main className={style.container}>
+			<Switch>
+				<Route exact path='/' component={Home} />
+				<Route exact path='/info' component={Info} />
+				<Route exact path='/grid' component={Grid} />
+			</Switch>
+		</main>
 	);
-}
+};
+
+export default Main;

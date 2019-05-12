@@ -3,11 +3,10 @@
 .btn {
 	text-transform: uppercase;
 	color: white;
-	display: inline-block;
 	border: none;
 	width: 100%;
-	height: 50px;
-	margin-top: 10px;
+	height: 20px;
+	// margin: 10px;
 	cursor: pointer;
 }
 
@@ -16,9 +15,15 @@ $buttonColors: 'primary' $color-primary, 'secondary' $color-secondary,
 
 @each $color in $buttonColors {
 	.#{nth($color, 1)} {
-		background-color: desaturate(nth($color, 2), 40);
+		background-color: nth($color, 2);
 		&:hover {
-			background-color: desaturate(nth($color, 2), 30);
+			background-color: lighten(nth($color, 2), 10);
 		}
+	}
+}
+$buttonMargins: 'm-1' 2px, 'm-2' 4px, 'm-3' 6px, 'm-4' 8px, 'm-5' 10px;
+@each $margin in $buttonMargins {
+	.#{nth($margin, 1)} {
+		margin: nth($margin, 2) 0;
 	}
 }

@@ -9,11 +9,6 @@
 	background-color: $color-grey-30;
 	padding: 3px 20px;
 	box-sizing: border-box;
-	p {
-		text-align: justify;
-		font-size: 1.5em;
-	}
-
 	overflow-y: scroll; // or 'auto'
 	overflow-x: hidden; // or 'auto'
 
@@ -24,7 +19,23 @@
 	&::-webkit-scrollbar-thumb {
 		background-color: $color-grey-50;
 	}
+
+	article {
+		background-color: red;
+		margin-bottom: 25px;
+		padding: 10px;
+		border-radius: 5px;
+		section {
+			background-color: $color-grey-30;
+			padding: 10px;
+			h1 {
+				margin: -10px -10px 0px -10px;
+				padding: 10px;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: 10px;
+			}
+		}
+	}
 }
-
-
-

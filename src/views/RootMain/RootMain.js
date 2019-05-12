@@ -1,14 +1,16 @@
 import React from 'react';
+
 import style from './RootMain.module.scss';
-
-import Main from '../Main';
 import SideBar from '../SideBar';
+import Main from '../Main';
 
-export default function Root() {
+const Root = () => {
 	return (
 		<div className={style.container}>
 			<SideBar />
 			<Main />
 		</div>
 	);
-}
+};
+
+export default Root;

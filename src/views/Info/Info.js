@@ -7,6 +7,8 @@ export default function Info() {
 			<article>
 				<section>
 					<h1>Info</h1>
+					<h1>Info</h1>
+
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Recusandae repellendus molestiae totam consequuntur
